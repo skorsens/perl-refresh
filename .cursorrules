@@ -1,0 +1,32 @@
+# Coding Style Rules
+
+## Variable Naming Convention
+- Use PascalCase for all variable names with a single lowercase letter prefix indicating the variable type
+- Type prefixes:
+  - `n` - Numbers (integers, floats): `$nCount`, `$nTotalPrice`
+  - `s` - Strings: `$sFirstName`, `$sErrorMessage`
+  - `b` - Booleans: `$bIsValid`, `$bHasPermission`
+  - `l` - Lists and Arrays: `@lStudentList`, `@lPrimeNumbers`
+  - `d` - Hashes (dictionaries): `%dConfigOptions`, `%dUserPreferences`
+
+## Examples
+```perl
+# Good - Type prefix + PascalCase
+my $sUserName = "John";
+my $nAge = 30;
+my $bIsActive = 1;
+my @lNumberList = (1, 2, 3);
+my %dPersonData = (Name => "Alice", Age => 30);
+
+# Avoid - No prefix or wrong naming style
+my $user_name = "John";
+my $userName = "John";
+my $UserName = "John";
+my @numbers = (1, 2, 3);
+```
+
+## Subroutine Parameters and Local Variables
+- Apply the same naming convention to all variables including:
+  - Subroutine parameters
+  - Local/lexical variables (my)
+  - Loop variables
